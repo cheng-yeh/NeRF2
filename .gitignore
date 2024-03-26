@@ -5,3 +5,5 @@ datatools/
 __pycache__/
 .vscode/
 scripts/
+*.output
+*.sbatch
