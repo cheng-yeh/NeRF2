@@ -2,7 +2,7 @@
 #SBATCH -J nerf2_test                           # Job name
 #SBATCH --account=gts-rs275                     # charge account
 #SBATCH -N 1 --gres=gpu:RTX_6000:1              # Number of nodes and cores per node required
-#SBATCH --mem-per-gpu=64G                       # Memory per core
+#SBATCH --mem-per-gpu=10G                       # Memory per core
 #SBATCH -t 144                                  # Duration of the job (Ex: 15 mins)
 #SBATCH -q inferno                              # QOS Name
 #SBATCH -o Report-%j.out                        # Combined output and error messages file
