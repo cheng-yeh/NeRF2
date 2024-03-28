@@ -6,4 +6,3 @@ __pycache__/
 .vscode/
 scripts/
 *.output
-*.sbatch
