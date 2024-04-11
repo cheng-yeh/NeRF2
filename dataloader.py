@@ -217,7 +217,7 @@ class BLE_dataset_v1(Dataset):
 
                     # Calculate distance between tx_pos and gateway_ray_o
                     distance = torch.norm(tx_pos - gateway_ray_o)
-                    print("distance: ", distance, " shape: ", distance.shape)
+                    #print("distance: ", distance, " shape: ", distance.shape)
             
                     # Rescale gateway_rays_d based on the adjusted radius
                     scaled_gateway_rays_d = distance * gateway_rays_d
