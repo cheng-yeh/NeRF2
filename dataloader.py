@@ -159,6 +159,114 @@ class Spectrum_dataset(Dataset):
         return r_o, r_d.T
 
 
+class BLE_dataset_v1(Dataset):
+    """ble dataset class version 1
+    In this version, we try to adaptively assign the raduis of the ball by the distance between gateway and tx.
+    """
+    def __init__(self, datadir, indexdir, scale_worldsize=1) -> None:
+        super().__init__()
+        self.datadir = datadir
+        tx_pos_dir = os.path.join(datadir, 'tx_pos.csv')
+        self.gateway_pos_dir = os.path.join(datadir, 'gateway_position.yml')
+        self.rssi_dir = os.path.join(datadir, 'gateway_rssi.csv')
+        self.dataset_index = np.loadtxt(indexdir, dtype=int)
+        self.beta_res, self.alpha_res = 9, 36  # resulution of rays
+
+        # load gateway position
+        with open(os.path.join(self.gateway_pos_dir)) as f:
+            gateway_pos_dict = yaml.safe_load(f)
+            self.gateway_pos = torch.tensor([pos for pos in gateway_pos_dict.values()], dtype=torch.float32)
+            self.gateway_pos = self.gateway_pos / scale_worldsize
+            self.n_gateways = len(self.gateway_pos)
+
+        # Load transmitter position
+        self.tx_poses = torch.tensor(pd.read_csv(tx_pos_dir).values, dtype=torch.float32)
+        self.tx_poses = self.tx_poses / scale_worldsize
+
+        # Load gateway received RSSI
+        self.rssis = torch.tensor(pd.read_csv(self.rssi_dir).values, dtype=torch.float32)
+
+        self.nn_inputs, self.nn_labels = self.load_data()
+
+
+    def load_data(self):
+        """load data from datadir to memory for training
+
+        Returns
+        -------
+        nn_inputs : tensor. [n_samples, 978]. The inputs for training
+                    tx_pos:3, ray_o:3, ray_d:9x36x3,
+        nn_labels : tensor. [n_samples, 1]. The RSSI labels for training
+        """
+        ## NOTE! Large dataset may cause OOM?
+        nn_inputs = torch.tensor(np.zeros((len(self), 3+3+3*self.alpha_res*self.beta_res)), dtype=torch.float32)
+        nn_labels = torch.tensor(np.zeros((len(self), 1)), dtype=torch.float32)
+
+        ## generate rays origin at gateways
+        gateways_ray_o, gateways_rays_d = self.gen_rays_gateways()
+
+        ## Load data
+        data_counter = 0
+        for idx in tqdm(self.dataset_index, total=len(self.dataset_index)):
+            rssis = self.rssis[idx]
+            tx_pos = self.tx_poses[idx].view(-1)  # [3]
+            for i_gateway, rssi in enumerate(rssis):
+                if rssi != -100:
+                    gateway_ray_o = gateways_ray_o[i_gateway].view(-1)  # [3]
+                    gateway_rays_d = gateways_rays_d[i_gateway].view(-1)  # [n_rays x 3]
+
+                    # Calculate distance between tx_pos and gateway_ray_o
+                    distance = torch.norm(tx_pos - gateway_ray_o)
+                    print("distance: ", distance, " shape: ", distance.shape)
+            
+                    # Rescale gateway_rays_d based on the adjusted radius
+                    scaled_gateway_rays_d = distance * gateway_rays_d
+
+                    nn_inputs[data_counter] = torch.cat([tx_pos, gateway_ray_o, scaled_gateway_rays_d], dim=-1)
+                    nn_labels[data_counter] = rssi
+                    data_counter += 1
+
+        nn_labels = rssi2amplitude(nn_labels)
+
+        return nn_inputs, nn_labels
+
+
+    def gen_rays_gateways(self):
+        """generate sample rays origin at gateways, for each gateways, we sample 36x9 rays
+
+        Returns
+        -------
+        r_o : tensor. [n_gateways, 1, 3]. The origin of rays
+        r_d : tensor. [n_gateways, n_rays, 3]. The direction of rays, unit vector
+        """
+
+        alphas = torch.linspace(0, 350, self.alpha_res) / 180 * np.pi
+        betas = torch.linspace(0, 90, self.beta_res) / 180 * np.pi
+        alphas = alphas.repeat(self.beta_res)    # [0,1,2,3,....]
+        betas = betas.repeat_interleave(self.alpha_res)    # [0,0,0,0,...]
+
+        radius = 1
+        x = radius * torch.cos(alphas) * torch.cos(betas)  # (1*360)
+        y = radius * torch.sin(alphas) * torch.cos(betas)
+        z = -radius * torch.sin(betas)
+
+        r_d = torch.stack([x, y, z], axis=0).T  # [9*36, 3]
+        r_d = r_d.expand([self.n_gateways, self.beta_res * self.alpha_res, 3])  # [n_gateways, 9*36, 3]
+        r_o = self.gateway_pos.unsqueeze(1) # [21, 1, 3]
+        r_o, r_d = r_o.contiguous(), r_d.contiguous()
+
+        return r_o, r_d
+
+
+    def __len__(self):
+        rssis = self.rssis[self.dataset_index]
+        return torch.sum(rssis != -100)
+
+    def __getitem__(self, index):
+        return self.nn_inputs[index], self.nn_labels[index]
+
+
+
 
 
 
@@ -366,4 +474,4 @@ class CSI_dataset(Dataset):
         return len(self.dataset_index) * self.n_bs
 
 
-dataset_dict = {"rfid": Spectrum_dataset, "ble": BLE_dataset, "mimo": CSI_dataset}
+dataset_dict = {"rfid": Spectrum_dataset, "ble": BLE_dataset_v1, "mimo": CSI_dataset}
