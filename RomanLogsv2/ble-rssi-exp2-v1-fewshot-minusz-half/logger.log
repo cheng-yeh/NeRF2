@@ -1,0 +1,186 @@
+2024-04-21 22:11:00,780 - nerf2 - INFO - expname:ble-rssi-exp2-v1-fewshot-minusz-half, datadir:data/BLE/, logdir:logs/BLE/
+2024-04-21 22:11:01,242 - nerf2 - INFO - Total number of parameters: 690564
+2024-04-21 22:11:01,244 - nerf2 - INFO - Found ckpts []
+2024-04-21 22:11:01,244 - nerf2 - INFO - Loading training set...
+2024-04-21 22:11:03,164 - nerf2 - INFO - Loading test set...
+2024-04-21 22:11:03,936 - nerf2 - INFO - Train set size:31885, Test set size:10115
+2024-04-21 22:11:03,936 - nerf2 - INFO - Start training. Current Iteration:1
+2024-04-21 22:48:02,052 - nerf2 - INFO - expname:ble-rssi-exp2-v1-fewshot-minusz-half, datadir:data/BLE/, logdir:logs/BLE/
+2024-04-21 22:48:02,515 - nerf2 - INFO - Total number of parameters: 690564
+2024-04-21 22:48:02,517 - nerf2 - INFO - Found ckpts ['logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/ckpts/025100.tar', 'logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/ckpts/025200.tar', 'logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/ckpts/025300.tar']
+2024-04-21 22:48:02,517 - nerf2 - INFO - Loading ckpt logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/ckpts/025300.tar
+2024-04-21 22:48:02,535 - nerf2 - INFO - Loading training set...
+2024-04-21 22:48:04,452 - nerf2 - INFO - Loading test set...
+2024-04-21 22:48:05,072 - nerf2 - INFO - Train set size:31885, Test set size:10115
+2024-04-21 22:48:05,072 - nerf2 - INFO - Start training. Current Iteration:25300
+2024-04-21 22:54:43,697 - nerf2 - INFO - expname:ble-rssi-exp2-v1-fewshot-minusz-half, datadir:data/BLE/, logdir:logs/BLE/
+2024-04-21 22:54:44,156 - nerf2 - INFO - Total number of parameters: 690564
+2024-04-21 22:54:44,157 - nerf2 - INFO - Found ckpts ['logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/ckpts/029800.tar', 'logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/ckpts/029900.tar', 'logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/ckpts/030000.tar']
+2024-04-21 22:54:44,157 - nerf2 - INFO - Loading ckpt logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/ckpts/030000.tar
+2024-04-21 22:54:44,177 - nerf2 - INFO - Loading training set...
+2024-04-21 22:54:46,061 - nerf2 - INFO - Loading test set...
+2024-04-21 22:54:46,818 - nerf2 - INFO - Train set size:31885, Test set size:10115
+2024-04-21 22:54:46,819 - nerf2 - INFO - Start evaluation
+2024-04-21 22:54:46,820 - nerf2 - INFO - Writing result to logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/result.txt...
+2024-04-21 22:54:47,164 - nerf2 - INFO - Median error:4.03
+2024-04-21 22:54:47,213 - nerf2 - INFO - Median error:2.89
+2024-04-21 22:54:47,263 - nerf2 - INFO - Median error:2.50
+2024-04-21 22:54:47,312 - nerf2 - INFO - Median error:3.00
+2024-04-21 22:54:47,361 - nerf2 - INFO - Median error:2.73
+2024-04-21 22:54:47,394 - nerf2 - INFO - Median error:3.11
+2024-04-21 22:54:47,426 - nerf2 - INFO - Median error:3.16
+2024-04-21 22:54:47,458 - nerf2 - INFO - Median error:3.01
+2024-04-21 22:54:47,490 - nerf2 - INFO - Median error:3.86
+2024-04-21 22:54:47,522 - nerf2 - INFO - Median error:3.37
+2024-04-21 22:54:47,554 - nerf2 - INFO - Median error:2.97
+2024-04-21 22:54:47,586 - nerf2 - INFO - Median error:3.03
+2024-04-21 22:54:47,618 - nerf2 - INFO - Median error:3.49
+2024-04-21 22:54:47,650 - nerf2 - INFO - Median error:3.82
+2024-04-21 22:54:47,682 - nerf2 - INFO - Median error:4.42
+2024-04-21 22:54:47,714 - nerf2 - INFO - Median error:3.00
+2024-04-21 22:54:47,746 - nerf2 - INFO - Median error:4.41
+2024-04-21 22:54:47,778 - nerf2 - INFO - Median error:3.20
+2024-04-21 22:54:47,810 - nerf2 - INFO - Median error:4.57
+2024-04-21 22:54:47,842 - nerf2 - INFO - Median error:3.32
+2024-04-21 22:54:47,873 - nerf2 - INFO - Median error:2.84
+2024-04-21 22:54:47,905 - nerf2 - INFO - Median error:4.02
+2024-04-21 22:54:47,937 - nerf2 - INFO - Median error:3.56
+2024-04-21 22:54:47,969 - nerf2 - INFO - Median error:3.46
+2024-04-21 22:54:48,001 - nerf2 - INFO - Median error:3.48
+2024-04-21 22:54:48,033 - nerf2 - INFO - Median error:3.60
+2024-04-21 22:54:48,065 - nerf2 - INFO - Median error:2.97
+2024-04-21 22:54:48,097 - nerf2 - INFO - Median error:2.71
+2024-04-21 22:54:48,129 - nerf2 - INFO - Median error:3.57
+2024-04-21 22:54:48,161 - nerf2 - INFO - Median error:2.88
+2024-04-21 22:54:48,193 - nerf2 - INFO - Median error:3.02
+2024-04-21 22:54:48,225 - nerf2 - INFO - Median error:3.54
+2024-04-21 22:54:48,257 - nerf2 - INFO - Median error:3.43
+2024-04-21 22:54:48,289 - nerf2 - INFO - Median error:3.67
+2024-04-21 22:54:48,321 - nerf2 - INFO - Median error:3.33
+2024-04-21 22:54:48,353 - nerf2 - INFO - Median error:5.03
+2024-04-21 22:54:48,385 - nerf2 - INFO - Median error:3.55
+2024-04-21 22:54:48,417 - nerf2 - INFO - Median error:4.41
+2024-04-21 22:54:48,449 - nerf2 - INFO - Median error:3.27
+2024-04-21 22:54:48,481 - nerf2 - INFO - Median error:4.29
+2024-04-21 22:54:48,513 - nerf2 - INFO - Median error:3.06
+2024-04-21 22:54:48,544 - nerf2 - INFO - Median error:3.10
+2024-04-21 22:54:48,576 - nerf2 - INFO - Median error:3.28
+2024-04-21 22:54:48,608 - nerf2 - INFO - Median error:3.61
+2024-04-21 22:54:48,640 - nerf2 - INFO - Median error:3.24
+2024-04-21 22:54:48,672 - nerf2 - INFO - Median error:3.42
+2024-04-21 22:54:48,704 - nerf2 - INFO - Median error:3.35
+2024-04-21 22:54:48,736 - nerf2 - INFO - Median error:3.28
+2024-04-21 22:54:48,768 - nerf2 - INFO - Median error:3.11
+2024-04-21 22:54:48,800 - nerf2 - INFO - Median error:3.73
+2024-04-21 22:54:48,832 - nerf2 - INFO - Median error:3.63
+2024-04-21 22:54:48,864 - nerf2 - INFO - Median error:3.45
+2024-04-21 22:54:48,896 - nerf2 - INFO - Median error:3.66
+2024-04-21 22:54:48,928 - nerf2 - INFO - Median error:2.98
+2024-04-21 22:54:48,960 - nerf2 - INFO - Median error:3.46
+2024-04-21 22:54:48,992 - nerf2 - INFO - Median error:3.59
+2024-04-21 22:54:49,024 - nerf2 - INFO - Median error:3.34
+2024-04-21 22:54:49,056 - nerf2 - INFO - Median error:4.60
+2024-04-21 22:54:49,088 - nerf2 - INFO - Median error:2.96
+2024-04-21 22:54:49,120 - nerf2 - INFO - Median error:4.09
+2024-04-21 22:54:49,152 - nerf2 - INFO - Median error:3.63
+2024-04-21 22:54:49,184 - nerf2 - INFO - Median error:3.87
+2024-04-21 22:54:49,216 - nerf2 - INFO - Median error:4.47
+2024-04-21 22:54:49,248 - nerf2 - INFO - Median error:3.88
+2024-04-21 22:54:49,279 - nerf2 - INFO - Median error:2.97
+2024-04-21 22:54:49,311 - nerf2 - INFO - Median error:3.08
+2024-04-21 22:54:49,343 - nerf2 - INFO - Median error:3.14
+2024-04-21 22:54:49,375 - nerf2 - INFO - Median error:3.02
+2024-04-21 22:54:49,407 - nerf2 - INFO - Median error:2.86
+2024-04-21 22:54:49,439 - nerf2 - INFO - Median error:2.54
+2024-04-21 22:54:49,471 - nerf2 - INFO - Median error:2.55
+2024-04-21 22:54:49,503 - nerf2 - INFO - Median error:3.01
+2024-04-21 22:54:49,535 - nerf2 - INFO - Median error:3.68
+2024-04-21 22:54:49,567 - nerf2 - INFO - Median error:3.88
+2024-04-21 22:54:49,599 - nerf2 - INFO - Median error:3.40
+2024-04-21 22:54:49,631 - nerf2 - INFO - Median error:2.87
+2024-04-21 22:54:49,662 - nerf2 - INFO - Median error:3.98
+2024-04-21 22:54:49,694 - nerf2 - INFO - Median error:2.94
+2024-04-21 22:54:49,726 - nerf2 - INFO - Median error:2.98
+2024-04-21 22:54:49,730 - nerf2 - INFO - Median error:3.58
+2024-04-21 22:54:49,732 - nerf2 - INFO - Writing result to logs/BLE/ble-rssi-exp2-v1-fewshot-minusz-half/result_pos.txt...
+2024-04-21 22:54:49,763 - nerf2 - INFO - Median error:4.03
+2024-04-21 22:54:49,801 - nerf2 - INFO - Median error:2.89
+2024-04-21 22:54:49,838 - nerf2 - INFO - Median error:2.50
+2024-04-21 22:54:49,875 - nerf2 - INFO - Median error:3.00
+2024-04-21 22:54:49,913 - nerf2 - INFO - Median error:2.73
+2024-04-21 22:54:49,950 - nerf2 - INFO - Median error:3.11
+2024-04-21 22:54:49,988 - nerf2 - INFO - Median error:3.16
+2024-04-21 22:54:50,025 - nerf2 - INFO - Median error:3.01
+2024-04-21 22:54:50,063 - nerf2 - INFO - Median error:3.86
+2024-04-21 22:54:50,100 - nerf2 - INFO - Median error:3.37
+2024-04-21 22:54:50,137 - nerf2 - INFO - Median error:2.97
+2024-04-21 22:54:50,175 - nerf2 - INFO - Median error:3.03
+2024-04-21 22:54:50,212 - nerf2 - INFO - Median error:3.49
+2024-04-21 22:54:50,250 - nerf2 - INFO - Median error:3.82
+2024-04-21 22:54:50,287 - nerf2 - INFO - Median error:4.42
+2024-04-21 22:54:50,325 - nerf2 - INFO - Median error:3.00
+2024-04-21 22:54:50,362 - nerf2 - INFO - Median error:4.41
+2024-04-21 22:54:50,399 - nerf2 - INFO - Median error:3.20
+2024-04-21 22:54:50,437 - nerf2 - INFO - Median error:4.57
+2024-04-21 22:54:50,474 - nerf2 - INFO - Median error:3.32
+2024-04-21 22:54:50,512 - nerf2 - INFO - Median error:2.84
+2024-04-21 22:54:50,549 - nerf2 - INFO - Median error:4.02
+2024-04-21 22:54:50,587 - nerf2 - INFO - Median error:3.56
+2024-04-21 22:54:50,624 - nerf2 - INFO - Median error:3.46
+2024-04-21 22:54:50,662 - nerf2 - INFO - Median error:3.48
+2024-04-21 22:54:50,699 - nerf2 - INFO - Median error:3.60
+2024-04-21 22:54:50,736 - nerf2 - INFO - Median error:2.97
+2024-04-21 22:54:50,774 - nerf2 - INFO - Median error:2.71
+2024-04-21 22:54:50,811 - nerf2 - INFO - Median error:3.57
+2024-04-21 22:54:50,848 - nerf2 - INFO - Median error:2.88
+2024-04-21 22:54:50,886 - nerf2 - INFO - Median error:3.02
+2024-04-21 22:54:50,923 - nerf2 - INFO - Median error:3.54
+2024-04-21 22:54:50,961 - nerf2 - INFO - Median error:3.43
+2024-04-21 22:54:50,998 - nerf2 - INFO - Median error:3.67
+2024-04-21 22:54:51,036 - nerf2 - INFO - Median error:3.33
+2024-04-21 22:54:51,073 - nerf2 - INFO - Median error:5.03
+2024-04-21 22:54:51,110 - nerf2 - INFO - Median error:3.55
+2024-04-21 22:54:51,148 - nerf2 - INFO - Median error:4.41
+2024-04-21 22:54:51,185 - nerf2 - INFO - Median error:3.27
+2024-04-21 22:54:51,223 - nerf2 - INFO - Median error:4.29
+2024-04-21 22:54:51,260 - nerf2 - INFO - Median error:3.06
+2024-04-21 22:54:51,297 - nerf2 - INFO - Median error:3.10
+2024-04-21 22:54:51,335 - nerf2 - INFO - Median error:3.28
+2024-04-21 22:54:51,372 - nerf2 - INFO - Median error:3.61
+2024-04-21 22:54:51,409 - nerf2 - INFO - Median error:3.24
+2024-04-21 22:54:51,447 - nerf2 - INFO - Median error:3.42
+2024-04-21 22:54:51,484 - nerf2 - INFO - Median error:3.35
+2024-04-21 22:54:51,522 - nerf2 - INFO - Median error:3.28
+2024-04-21 22:54:51,559 - nerf2 - INFO - Median error:3.11
+2024-04-21 22:54:51,597 - nerf2 - INFO - Median error:3.73
+2024-04-21 22:54:51,634 - nerf2 - INFO - Median error:3.63
+2024-04-21 22:54:51,671 - nerf2 - INFO - Median error:3.45
+2024-04-21 22:54:51,709 - nerf2 - INFO - Median error:3.66
+2024-04-21 22:54:51,746 - nerf2 - INFO - Median error:2.98
+2024-04-21 22:54:51,784 - nerf2 - INFO - Median error:3.46
+2024-04-21 22:54:51,821 - nerf2 - INFO - Median error:3.59
+2024-04-21 22:54:51,858 - nerf2 - INFO - Median error:3.34
+2024-04-21 22:54:51,896 - nerf2 - INFO - Median error:4.60
+2024-04-21 22:54:51,933 - nerf2 - INFO - Median error:2.96
+2024-04-21 22:54:51,971 - nerf2 - INFO - Median error:4.09
+2024-04-21 22:54:52,008 - nerf2 - INFO - Median error:3.63
+2024-04-21 22:54:52,046 - nerf2 - INFO - Median error:3.87
+2024-04-21 22:54:52,083 - nerf2 - INFO - Median error:4.47
+2024-04-21 22:54:52,121 - nerf2 - INFO - Median error:3.88
+2024-04-21 22:54:52,158 - nerf2 - INFO - Median error:2.97
+2024-04-21 22:54:52,195 - nerf2 - INFO - Median error:3.08
+2024-04-21 22:54:52,233 - nerf2 - INFO - Median error:3.14
+2024-04-21 22:54:52,270 - nerf2 - INFO - Median error:3.02
+2024-04-21 22:54:52,307 - nerf2 - INFO - Median error:2.86
+2024-04-21 22:54:52,345 - nerf2 - INFO - Median error:2.54
+2024-04-21 22:54:52,382 - nerf2 - INFO - Median error:2.55
+2024-04-21 22:54:52,419 - nerf2 - INFO - Median error:3.01
+2024-04-21 22:54:52,457 - nerf2 - INFO - Median error:3.68
+2024-04-21 22:54:52,494 - nerf2 - INFO - Median error:3.88
+2024-04-21 22:54:52,532 - nerf2 - INFO - Median error:3.40
+2024-04-21 22:54:52,569 - nerf2 - INFO - Median error:2.87
+2024-04-21 22:54:52,606 - nerf2 - INFO - Median error:3.98
+2024-04-21 22:54:52,644 - nerf2 - INFO - Median error:2.94
+2024-04-21 22:54:52,681 - nerf2 - INFO - Median error:2.98
+2024-04-21 22:54:52,690 - nerf2 - INFO - Median error:3.58
+2024-04-21 22:54:52,787 - nerf2 - INFO - Total Median error:3.38
